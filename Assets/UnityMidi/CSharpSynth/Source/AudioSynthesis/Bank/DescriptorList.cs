@@ -333,7 +333,7 @@
                 c = reader.Read();
             }
             tagName = sbuild.ToString().Trim().ToLower();
-            sbuild.Clear();
+            sbuild.Length = 0;
             //read the description
             c = reader.Read();
             while (c != -1 && c != '<')
@@ -342,7 +342,7 @@
                 c = reader.Read();
             }
             description = sbuild.ToString();
-            sbuild.Clear();
+            sbuild.Length = 0;
             //read closing tag
             c = reader.Read();
             while (c != -1 && c != '>')

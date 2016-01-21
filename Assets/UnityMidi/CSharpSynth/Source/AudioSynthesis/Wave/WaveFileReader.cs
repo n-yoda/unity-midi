@@ -44,7 +44,7 @@
         {
             if (reader == null)
                 return;
-            reader.Dispose();
+            reader.Close();
             reader = null;
         }
 

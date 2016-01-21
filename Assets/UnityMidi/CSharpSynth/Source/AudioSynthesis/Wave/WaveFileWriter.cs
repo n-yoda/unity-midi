@@ -46,7 +46,7 @@
         {
             if (writer == null)
                 return;
-            writer.Dispose();
+            writer.Close();
             writer = null;
             using (BinaryWriter bw2 = new BinaryWriter(wavR.OpenResourceForWrite()))
             {
