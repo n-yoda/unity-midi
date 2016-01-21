@@ -86,6 +86,13 @@ namespace AudioSynthesis.Synthesis
             get { return sampleBuffer.Length; }
         }
         /// <summary>
+        /// A buffer which will be filled on GetNext.
+        /// </summary>
+        public float[] WorkingBuffer
+        {
+            get { return sampleBuffer; }
+        }
+        /// <summary>
         /// The number of voices
         /// </summary>
         public int Polyphony
@@ -242,6 +249,11 @@ namespace AudioSynthesis.Synthesis
             Array.Clear(sampleBuffer, 0, sampleBuffer.Length);
             FillWorkingBuffer();
             ConvertWorkingBuffer(buffer, sampleBuffer);
+        }
+        public void GetNext()
+        {
+            Array.Clear(sampleBuffer, 0, sampleBuffer.Length);
+            FillWorkingBuffer();
         }
         #region Getters
         public float GetChannelVolume(int channel) { return synthChannels[channel].volume.Combined / 16383f; }
