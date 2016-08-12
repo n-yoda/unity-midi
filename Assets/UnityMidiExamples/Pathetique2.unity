@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bankSource:
-    streamingAssetPath: CsharpSynth/GMBank.bank
+    streamingAssetPath: CSharpSynth/GMBank.bank
   midiSource:
     streamingAssetPath: ExampleMidis/pathetique-2.mid
   loadOnAwake: 1
